@@ -32,7 +32,7 @@ To instal just run:
 npm- install
 
 Libs: 
-React Beautiful Drag n Drop
+React Beautiful Drag n Drop - https://github.com/atlassian/react-beautiful-dnd
 For smooth transitions and easy to set up drag and drop elements, used for Tasks as draggable component and Columns as Droppable components.
 React Unique User Id (uuid)
 Easy to use, each task and new colums are attributed uuids.
