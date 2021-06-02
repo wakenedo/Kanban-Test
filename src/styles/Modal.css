@@ -1,14 +1,19 @@
-.modal {
-    position: fixed;
+.modal__Columns, .modal__Tasks {
+    position: absolute;
     margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     border-left: 1px solid gray;
     border-bottom: 1px solid gray;
     border-right: 1px solid gray;
-    border-radius: 5px;
-    
+    border-radius: 5px;    
+}
+
+.modal__Tasks {
+    margin-top: 5px;
+}
+
+.modal__Columns {
+    margin-top: 25px;
 }
 
 .modal__Title {

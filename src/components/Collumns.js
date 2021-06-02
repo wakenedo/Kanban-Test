@@ -16,7 +16,7 @@ import ModalTasks from './ModalTasks';
 function Container() {
     const [newTaskName, setNewTaskName] = useState('')
     function deleteTasks(id) {
-        let newTasks = {...Tasks}
+        let newTasks = {...collumns}
         delete newTasks[id]
         addTask(newTasks)
     }
@@ -28,6 +28,7 @@ function Container() {
     }
     
     //First three columns are default, so no need for uuid
+
 
     const [collumns, setCollumns] = useState({
         1: {
@@ -62,7 +63,11 @@ function Container() {
     }
 
     const addTask = (collumId) => {
-        let newTask = { id: uuidv4(), content: 'New' }
+        console.log(newTaskName)
+        let newTask = { 
+            id: uuidv4(), 
+            name: newTaskName 
+        }
 
         let newCollumn = collumns[collumId]
 
@@ -73,6 +78,8 @@ function Container() {
     }
 
     const [show, setShow] = useState(false)
+    const [show1, setShow1] = useState(false) 
+    
 
     return (
         <div>
@@ -104,7 +111,9 @@ function Container() {
                                             <div key={id} className="collumns" {...provided.droppableProps} ref={provided.innerRef}>
                                                 {column.items.map((item, index) => {
                                                     return (
-                                                        <Tasks item={item} index={index} onClick={deleteTasks}/>
+                                                        <Tasks key={index} item={item} index={index} onClick={deleteTasks}
+                                                        />
+                                                        
                                                         
                                                     )
                                                 })}
@@ -113,17 +122,20 @@ function Container() {
                                         )
                                     }}
                                 </Droppable>
-                                <button  className="btn" 
-                                onClick={() =>  addTask(id)}>
-                                Add task
+                                
+                                <button className="btn" 
+                                onClick={() =>  setShow1(id)}>
+                                Add task                         
+                                </button>
                                 <ModalTasks 
                                 newTaskName={newTaskName}
                                 setNewTaskName={setNewTaskName}
-                                addTask={addTask(id)}
-                                show={show}
-                                onClose={() => setShow(true)} 
+                                onClose={() => setShow1(false)}
+                                addTask={() => addTask(id)}     
+                                show1={show1 === id}
+                                id={id}
                                 />
-                                </button>
+                                
                                 
                                 <button onClick={() => deleteCollumns(id)}>
                                 Remove List

@@ -13,7 +13,7 @@ function Tasks({ item, index, id }) {
         <div key={id} className='tasks' ref={provided.innerRef}
         {...provided.draggableProps}{...provided.dragHandleProps}
         style={{...provided.draggableProps.style}}>
-        {item.content}
+        {item.name}
         
         </div>
         

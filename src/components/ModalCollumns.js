@@ -3,8 +3,10 @@ import '../styles/Modal.css'
 
 
 
-const Modal = ({show, newCollumnName, setNewCollumnName, addCollumn, onClose}) => {
+const ModalCollumns = ({show, newCollumnName, setNewCollumnName, addCollumn, onClose}) => {
     
+    
+
     if (!show){
         return null
     }
@@ -16,12 +18,13 @@ const Modal = ({show, newCollumnName, setNewCollumnName, addCollumn, onClose}) =
     
     
     return (
-        <div className='modal'>
+        <div className='modal__Columns'>
             <div className='modal__Content'>
                 <div className='modal__Header'>
                     <h4 className='modal__Title'>Add List</h4>
                 </div>
                 <div className='modal__Body'>
+                    
                     {
                         
                     <input 
@@ -30,9 +33,6 @@ const Modal = ({show, newCollumnName, setNewCollumnName, addCollumn, onClose}) =
                     setNewCollumnName(event.target.value)}                     
                     placeholder="Insert text..."></input>
                     
-                    
-
-
                     }
                     
                     
@@ -47,7 +47,7 @@ const Modal = ({show, newCollumnName, setNewCollumnName, addCollumn, onClose}) =
 }
 
 
-export default Modal 
+export default ModalCollumns 
 
 
 

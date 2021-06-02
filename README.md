@@ -23,4 +23,33 @@ O componente container será renderizado como as colunas do kanban.
 #In-Progress
 #Done
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Kanban Project - Beta version.
+
+To instal just run: 
+
+npm- install
+
+Libs: 
+React Beautiful Drag n Drop
+For smooth transitions and easy to set up drag and drop elements, used for Tasks as draggable component and Columns as Droppable components.
+React Unique User Id (uuid)
+Easy to use, each task and new colums are attributed uuids.
+
+Features
+
+Dynamic tasks
+Dynamic Lists
+
+Create Tasks:
+Create and input text to your own tasks
+
+Create Lists:
+Create and Input title your own lists
+
+Delete Lists: You can delete Lists
+
+
+
 
